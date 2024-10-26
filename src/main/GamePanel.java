@@ -94,6 +94,12 @@ public class GamePanel extends JPanel implements Runnable{
             }
         }
     }
+    private Color getRandomColor() {
+        int r = (int) (Math.random() * 256);
+        int g = (int) (Math.random() * 256);
+        int b = (int) (Math.random() * 256);
+        return new Color(r, g, b);
+    }
     private boolean hasSpawnedSlimes = false;
     public int totalSlimesToSpawn = 2;
     public int countUpgrade = 0;
@@ -123,6 +129,7 @@ public class GamePanel extends JPanel implements Runnable{
                 playSE(5);
                 gameState = pauseState;
                 checkPause = true;
+                this.setBackground(getRandomColor());
             }
         }
         player.update();
