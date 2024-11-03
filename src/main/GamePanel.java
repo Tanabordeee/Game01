@@ -138,7 +138,7 @@ public class GamePanel extends JPanel implements Runnable{
             Bullet bullet = bulletIterator.next();
             bullet.update();
             if(bullet.life <= 0 || bullet.isOutOfBounds()){
-                 projectilesToRemove.add(bullet);
+                projectilesToRemove.add(bullet);
             }
         }
         for (int i = 0; i < slimes.size(); i++) {
